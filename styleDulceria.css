@@ -1,0 +1,141 @@
+.titulo::after {
+    content: "📽️";
+}
+
+.grid-container>*{
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+.header{
+    grid-area: header;
+}
+.navbar{
+    grid-area: navbar;
+}
+.division{
+    grid-area: division;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: cadetblue;
+}
+.articulo{
+    grid-area: articulo;
+    background-color: coral;
+}
+.footer{
+    grid-area: footer;
+}
+/*Vista para el telefono*/
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "division"
+    "sidebar"
+    "articulo"
+    "footer" ;
+}
+/*Vista tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "division division"
+        "sidebar sidebar"
+        "articulo articulo"
+        "footer footer";
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "navbar navbar navbar"
+        "header header header"
+        "division division division"
+        "articulo articulo sidebar"
+        "footer footer footer";
+    }
+}
+    body{
+background-color: blueviolet;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: aliceblue;
+}
+.card{
+background-color: rgb(191, 157, 223);
+width: 350px;
+height: 380px;
+text-align: center;
+padding: 5px;
+margin: 10px;
+border-radius: 5px;
+}
+a{
+color:aliceblue;
+text-decoration: none;
+font-size: 1.3rem;
+}
+nav{
+text-align: right;
+font-size: large;
+word-spacing: 10px;
+padding: 10px;
+margin: 10px;
+}
+.navegacion-fondo {
+    background-color: #A88BBD;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.contenedor-fila{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 15px;
+flex-wrap: wrap;
+}
+
+img{
+border-radius: 5px;
+height: 170px;
+width: 250px;
+}
+.descripcion-producto{
+font-weight: bold;
+}
+.boton-agregar{
+color:blueviolet;
+background-color: rgb(191, 157, 223);
+padding: 5px 10px;
+border-radius: 5px;
+border: 1px solid blueviolet;
+font-weight: bold;
+font-size: 1.02rem;
+}
+.boton-agregar:hover{
+background-color: blueviolet;
+color: aliceblue;
+}
+.precio-producto{
+font-weight: bold;
+font-size: 1.1rem;
+}
+
+.footer{
+display: flex;
+justify-content: space-around;
+color: aliceblue;
+padding: 15px;
+background-color: rgb(191, 157, 223);
+text-align: center;
+}

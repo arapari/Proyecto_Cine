@@ -1,0 +1,174 @@
+body {
+    background-color: #8A2BE2;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 233, 255);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 233, 255);
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo::after {
+    content: "📽️";
+}
+
+nav {
+    text-align: right;
+    font-size: large;
+    word-spacing: 10px;
+}
+
+.navegacion-fondo {
+    background-color: #A88BBD;
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.navegacion-principal a {
+    color:aliceblue;
+}
+
+.imgs img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Ajusta este valor según sea necesario */
+}
+
+.footer {
+    text-align: center;
+}
+
+.contacto {
+    text-align: center;
+    color:aliceblue;
+}
+
+.formulario {
+    background-color: #A88BBD;
+    width: min(600px, 100%);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #8A2BE2;
+}
+
+.grid-container > * {
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.division {
+    grid-area: division;
+}
+
+.imgs {
+    grid-area: imgs;
+}
+
+.articulo {
+    grid-area: articulo;
+}
+
+
+/* footer */
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+    padding: 15px;
+    background-color: rgb(191, 157, 223);
+    }
+   
+/* responsivo */
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "navbar"
+        "division"
+        "imgs"
+        "articulo"
+        "footer";
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "navbar"
+            "division"
+            "imgs"
+            "articulo"
+            "footer";
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "navbar navbar"
+            "division division"
+            "imgs imgs"
+            "articulo articulo"
+            "footer footer";
+    }
+
+    .navegacion-principal {
+        justify-content: space-between;
+    }
+
+    .imgs section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .imgs img {
+        max-width: 30%;
+        margin: 10px;
+    }
+}
+
+.title {
+    color: aliceblue;
+    font-size: 25 px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

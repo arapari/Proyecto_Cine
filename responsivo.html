@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>CSS Grid</title>
+    <style>
+        .grid-container>*{
+            text-align: center;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .navbar{
+            grid-area: navbar;
+        }
+        .division{
+            grid-area: division;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: cadetblue;
+        }
+        .articulo{
+            grid-area: articulo;
+        
+        }
+        .footer{
+            grid-area: footer;
+        
+        }
+        /*Vista para el telefono*/
+        .grid-container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: auto;
+            grid-template-areas:
+            "header"
+            "navbar"
+            "division"
+            "sidebar"
+            "articulo"
+            "footer" ;
+        }
+        /*Vista tablet*/
+        @media(min-width:768px){
+            .grid-container{
+                grid-template-columns: auto;
+                grid-template-areas:
+                "header header"
+                "navbar navbar"
+                "division division"
+                "sidebar sidebar"
+                "articulo articulo"
+                "footer footer";
+            }
+        }
+        @media(min-width:900px){
+            .grid-container{
+                grid-template-columns: auto;
+                grid-template-areas:
+                "header header header"
+                "navbar navbar navbar"
+                "division division division"
+                "articulo articulo sidebar"
+                "footer footer footer";
+            }
+        }
+    </style>
+</head>
+<body class="grid-container">
+    <header class="header">
+        <h1>Cine Top </h1>
+        <nav>
+            <a href="" target="_blank">Inicio</a>
+            <a href="./horarios.html" target="_blank">Horarios</a>
+            <a href="" target="_blank">Contactanos</a>  
+        </nav>
+        <img id="Sala" src="./src/imagenes/Sala cine.avif" alt="Sala de cine con pantalla y asientos" width="600" height="500">
+    </header>
+    <!-- <nav class="navbar">Navbar</nav> -->
+    <div class="division">
+        <section>
+            <h2>Bienvenidos</h2>
+            <p>Nos complace recibirte en nuestra casa de la magia y la emoción. Aquí, cada película es un viaje, cada sonido es una melodía y cada escena es un recuerdo. Te invitamos a sumergirte en nuestras historias, a vivir aventuras inolvidables y a compartir risas</p>
+        </section>
+    </div>
+   <!-- <aside class="sidebar">Aside</aside> -->
+    <article class="articulo">
+        <section>
+            <h2> Cartelera</h2>
+            <br>
+            <h2> Estrenos </h2>
+            <br>
+            <h2> Preventa </h2>
+            <br>
+            <h2> Todas las películas </h2>
+            
+                    <div id="uno">
+                    <h2>Abigail</h2>
+                    <img src="./src/imagenes/abigail.jpg" alt="poster abigail" width="230" height="342">
+                    <section class="info" class="info_mostrar">
+                        <div class="info_contenedor">
+                            <p class="info_texto">
+                            <strong class="titulo">Sinopsis:</strong>
+                            <br>
+                            Los niños pueden ser tan monstruosos. Después de que un grupo de aspirantes a delincuentes secuestran a una bailarina de 12 años, hija de una poderosa figura del inframundo, sólo deberán vigilarla durante la noche para poder cobrar un rescate de 50 millones de dólares. En una mansión aislada, los captores comienzan a desaparecer, uno por uno, y descubren, para su creciente horror, que la pequeña niña con la que están encerrados no es normal.
+                            <br>
+                            <strong class="titulo">Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9rQzNZxi73g?si=m1n0ntLDmOyEOdPH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong class="subtitulo">Clasificación:</strong> B15
+                            <br>
+                            <strong class="subtitulo">Género:</strong> Horror
+                            <br>
+                            <strong class="subtitulo">Duración:</strong> 1h 50m
+                            </p>
+                            <button class="boton" id="Horarios"><a href="horarios.html" target="_blank">Horarios</a></button>
+                            <br>
+                            <button class="boton"><a href="#" class="info_cerrar">Cerrar</a></button>
+                        
+                         </div>
+                    </section>
+                </div>
+            
+    <!--
+              <section class="info" class="info_mostrar">
+                <div id="dos">
+                <h2>Amigos Imaginarios</h2>
+                <img src="./src/imagenes/Amigos imaginarios.jpg" alt="poster amigos imaginarios" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>Del escritor y director John Krasinski, Amigos Imaginarios trata sobre una niña que descubre que puede ver a los amigos imaginarios de las personas –y lo que puede hacer con ese superpoder– mientras se embarca en una aventura mágica para reconectar a los AMIs olvidados con sus niños. Amigos Imaginarios está protagonizada por Ryan Reynolds, John Krasinski, Cailey Fleming y Fiona Shaw junto a muchos personajes maravillosamente únicos que reflejan el increíble poder de la imaginación de un niño.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NGKheYXKVvU?si=MI0KKuP0wmT5yiKu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> A
+                            <br>
+                            <strong>Género:</strong> Familiar
+                            <br>
+                            <strong>Duración:</strong> 1h 40m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info" class="info_mostrar">
+                <div id="tres">
+                <h2>Desafiante</h2>
+                <img src="./src/imagenes/Desafiantes.png" alt="poster desafiante" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>Del visionario cineasta Luca Guadagnino, “Desafiantes” está protagonizada por Zendaya como Tashi Duncan, una ex prodigio del tenis convertida en entrenadora y una fuerza de la naturaleza que no se disculpa por su juego dentro y fuera de la cancha. Casada con un campeón en una racha de derrotas (Mike Faist), la estrategia de Tashi para la redención de su marido da un giro sorprendente cuando debe enfrentarse al fracasado Patrick (Josh O'Connor), su ex mejor amigo y ex novio de Tashi. Mientras sus pasados y presentes chocan y las tensiones aumentan, Tashi debe preguntarse: ¿cuánto costará ganar?
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/V3ATDzUz27o?si=X_3dI-qlqh9gqyLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> B15
+                            <br>
+                            <strong>Género:</strong> Drama, Romance
+                            <br>
+                            <strong>Duración:</strong> 2h 12m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>   
+                </div>
+            </section>
+
+           <section class="info" class="info_mostrar">
+            <div id="cuatro">
+                <h2>El Planeta De Los Simios: Nuevo Reino</h2>
+                <img src="./src/imagenes/El planeta de los simios.jpeg" alt="poster el planeta de los simios" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3> 
+                        <p>El director Wes Ball le da nueva vida a la épica franquicia global situada varias generaciones en el futuro tras el reinado de César, en el que los simios son la especie dominante que vive en armonía y los humanos han quedado reducidos a vivir en las sombras. Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un viaje desgarrador que le llevará a cuestionarse todo lo que sabe sobre el pasado y a tomar decisiones que definirán el futuro de simios y humanos por igual.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/t9pgdfvh_dg?si=JmFhGfQ6HXWNwIYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> S/C
+                            <br>
+                            <strong>Género:</strong> Acción
+                            <br>
+                            <strong>Duración:</strong> 2h 25m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+        
+
+            <section class="info" class="info_mostrar">
+                <div id="cinco">
+                <h2>Firma Aquí</h2>
+                <img src="./src/imagenes/firma aquí.jpg" alt="poster firma aquí" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>En el futuro, los científicos se dieron cuenta de que las parejas duran una media de 4 años juntos y, por ello, se estipuló que se formarían parejas mediante un test y pasado ese periodo de tiempo se disolverían. No obstante, siempre hay rebeldes.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ChaPz7154D0?si=362bc3qRmMw2Pt5V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> B
+                            <br>
+                            <strong>Género:</strong> Comedia, Drama, Romance
+                            <br>
+                            <strong>Duración:</strong> 1h 43m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="info" class="info_mostrar">
+                <div id="seis">
+                <h2>Furiosa: A Mad Max Saga</h2>
+                <img src="./src/imagenes/furiosa.jpg" alt="poster Furiosa" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>Mientras el mundo caía, la joven Furiosa es arrebatada del Lugar Verde de Muchas Madres y cae en manos de una gran Horda de Motociclistas liderada por el Señor de la Guerra Dementus. Navegando por Wasteland, se encuentran con la Ciudadela presidida por The Immortan Joe. Mientras los dos Tiranos luchan por el dominio, Furiosa debe sobrevivir a muchas pruebas mientras reúne los medios para encontrar el camino a casa.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yYu5ui61gQM?si=FAKFfx76SaDoAlNl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> S/C
+                            <br>
+                            <strong>Género:</strong> Acción, Aventura
+                            <br>
+                            <strong>Duración:</strong> 2h 22m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+       
+
+            <section class="info" class="info_mostrar">
+                <div id="siete">
+                <h2>Garfield - Fuera De Casa</h2>
+                <img src="./src/imagenes/Garfield.jpg" alt="poster Garfield" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>Garfield, el gato casero mundialmente famoso odia-lunes y amante de las lasañas, está por tener una aventura fuera de casa. Después de una inesperada reunión con su ausente padre – un sucio gato callejero llamado Vic – Garfield y su canino amigo Odie, son forzados a dejar su consentida vida para unirse a Vic en un divertido asalto de gran riesgo.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9u2N09NhRtw?si=5D5OYTk9IoaIJCtz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> AA
+                            <br>
+                            <strong>Género:</strong> Animación, Comedia, Familiar
+                            <br>
+                            <strong>Duración:</strong> 1h 41m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info" class="info_mostrar">
+                <div id="ocho">
+                <h2>Jugaremos En El Bosque</h2>
+                <img src="./src/imagenes/jugaremos en el bosque.jpg" alt="poster jugaremos en el bosque" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>La vida de Javier y Mariana se está desmoronando por lo que deciden mudarse a la vieja hacienda de la familia, para empezar de nuevo. Pero allí, una fuerte e imponente presencia del pasado está manipulando a la pareja para obtener lo que quiere: volver a la vida.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TklCYR3txts?si=mHxi4ow0dPrTSaJ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> B15
+                            <br>
+                            <strong>Género:</strong> Terror
+                            <br>
+                            <strong>Duración:</strong> 1h 36m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="info" class="info_mostrar">
+                <div id="nueve">
+                <h2>Profesión Peligro</h2>
+                <img src="./src/imagenes/Profesión peligroso.jpg" alt="poster profesión peligro" width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>Del director y doble de acción David Leitch, el director de Tren bala, Deadpool 2, Atómica y Rápidos y furiosos: Hobbs & Shaw, y productor de John Wick, Nadie y Noche sin paz, llega su película más personal hasta la fecha. Un nuevo y divertido thriller de acción, una carta de amor a las películas de acción y a los equipos de dobles de riesgo que las hacen: Profesión peligro. El nominado al Oscar® Ryan Gosling (Barbie, La La Land, Drive) interpreta a Colt Seavers, un doble de acción que, tras haber abandonado el negocio un año antes para centrarse en su salud física y mental, es llamado de nuevo al servicio cuando desaparece la estrella de una película de gran presupuesto dirigida por su ex, Jody Moreno, interpretada por la ganadora del Globo de Oro Emily Blunt (Oppenheimer, Un lugar tranquilo, Sicario). Mientras la despiadada productora de la película (la ganadora del Emmy Hannah Waddingham; Ted Lasso), maniobra para mantener la desaparición de la estrella Tom Ryder (el ganador del Globo de Oro Aaron Taylor-Johnson; Tren bala) en secreto para el estudio y los medios de comunicación, Colt realiza las acrobacias más escandalosas de la película mientras intenta (no muy exitosamente) ganarse de nuevo la confianza de Jody. Pero a medida que se profundiza el misterio en torno a la estrella desaparecida, Colt se verá atrapado en una siniestra trama criminal que lo empujará al borde de una caída más peligrosa que cualquier acrobacia.
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HCiWnHroZAQ?si=5mOzyZaZ7NdUis7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> B
+                            <br>
+                            <strong>Género:</strong> Acción, Comedia, Romance
+                            <br>
+                            <strong>Duración:</strong> 2h 07m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info" class="info_mostrar">
+                <div id="diez">
+                <h2>Una Jungla De Locura 2</h2>
+                <img src="./src/imagenes/una jungla de locura 2.jpg" alt="poster una jungla de locura 2 " width="230" height="342">
+                    <div>
+                        <h3>Sinopsis</h3>
+                        <p>Un misterioso supervillano cubre la selva de espuma rosa que explota al contacto con el agua y la Pandilla de la Jungla tendrán que recorrer el mundo a contrarreloj en busca de un antídoto, antes de la temporada de lluvia. ¿Lograrán salvar la Jungla?
+                            <br>
+                            <strong>Trailer:</strong>
+                            <br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/49vOLv3b6hI?si=EK08LZtXuNjVz_HK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br>
+                            <strong>Clasificación:</strong> TBD
+                            <br>
+                            <strong>Género:</strong> Animación, Aventura, Comedia
+                            <br>
+                            <strong>Duración:</strong> 1h 22m
+                        </p>
+                        <button><a href="#">Comprar boletos</a></button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <script src="main.js"></script>
+        <article>
+            <img src="">
+            <h2>Pelicula del mes</h2>
+            <p>Descripcion</p>
+        </article>
+    </article>
+    <footer class="footer">
+        <p>Todos los derechos reservados &#169 Cine TOP</p>
+    </footer>
+-->
+
+</body>
+</html>
